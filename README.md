@@ -1,5 +1,8 @@
 # Mova
 
+[![Gem Version](https://badge.fury.io/rb/mova.svg)](http://badge.fury.io/rb/mova)
+[![Build Status](https://travis-ci.org/mova-rb/mova.svg?branch=master)](https://travis-ci.org/mova-rb/mova)
+
 **Mova** is a translation and localization library that aims to be simple and fast.
 
 ## Name origin
