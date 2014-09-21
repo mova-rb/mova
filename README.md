@@ -48,7 +48,7 @@ translator.get(:hi_from_redis, :en) #=> "Hi!"
 
 ## Documentation
 
-*link to rubydoc*
+http://rubydoc.info/github/mova-rb/mova/master/frames
 
 ## Design principles
 
