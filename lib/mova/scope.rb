@@ -35,13 +35,24 @@ module Mova
     # Makes a new scope from given parts.
     #
     # @return [String]
-    # @param parts [Array<String, Symbol>, *Array<String, Symbol>]
+    #
+    # @overload join(part1, part2)
+    #   @param part1 [String, Symbol]
+    #   @param part2 [String, Symbol]
+    #
+    # @overload join(parts)
+    #   @param parts [Array<String, Symbol>]
     #
     # @example
     #   Scope.join("hello", "world") #=> "hello.world"
     #   Scope.join([:hello, "world"]) #=> "hello.world"
-    def join(*parts)
-      parts.join(SEPARATOR)
+    def join(part_or_array, second_part = nil)
+      if second_part
+        "#{part_or_array}#{SEPARATOR}#{second_part}"
+      else
+        # then assume it's an array
+        part_or_array.join(SEPARATOR)
+      end
     end
 
     # Split a scope into parts.
