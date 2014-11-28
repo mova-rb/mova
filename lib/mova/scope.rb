@@ -86,9 +86,9 @@ module Mova
     #   Scope.cross_join([:de, :en], [:hello, :hi]) #=>
     #     ["de.hello", "de.hi", "en.hello", "en.hi"]
     def cross_join(locales, keys)
-      locales.map do |locale|
+      locales.flat_map do |locale|
         keys.map { |key| join(locale, key) }
-      end.flatten
+      end
     end
   end
 end
