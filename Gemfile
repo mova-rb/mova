@@ -2,10 +2,8 @@ source 'https://rubygems.org'
 
 gemspec
 
-gem "minitest", "~> 5.4"
-gem "rspec-mocks", "~> 3.0"
-gem "yard", "~> 0.8"
-gem "pry"
+gem "pry", :group => :debug
+gem "yard", "~> 0.8", :group => :doc
 
 group :benchmark do
   gem "benchmark-ips"
